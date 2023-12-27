@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synergy Space - Booking System</title>
+    <style>
+:root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+       .logo {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.menu-bar {
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 10px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+}
+       .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Change link color on hover */
+.nav-menu li a:hover {
+    color: grey;
+}
+.hide {
+  display: none;
+}
+   
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+
+}
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left; /* Align form elements to the left */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select, input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+ <div class="menu-bar">
+      <h1 class="logo">Synergy<span>Space</span></h1></div>
+    <h1>Book a Time Slot</h1>
+    <form method="post" action="process_booking.php">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" required><br>
+
+        <label for="time_slot">Time Slot:</label>
+        <select name="time_slot" required>
+            <option value="9:00 - 10:00">9:00 - 10:00</option>
+            <option value="10:00 - 11:00">10:00 - 11:00</option>
+            <option value="11:00 - 12:00">11:00 - 12:00</option>
+            <option value="12:00 - 13:00">12:00 - 13:00</option>
+            <option value="13:00 - 14:00">13:00 - 14:00</option>
+            <option value="14:00 - 15:00">14:00 - 15:00</option>
+            <option value="15:00 - 16:00">15:00 - 16:00</option>
+            <option value="16:00 - 17:00">16:00 - 17:00</option>
+        </select><br>
+
+        <input type="submit" value="Book">
+    </form>
+</body>
+</html>
